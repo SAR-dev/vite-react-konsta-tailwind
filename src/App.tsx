@@ -1,10 +1,10 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { App as KonstaApp } from 'konsta/react';
+import { modeTypes, themeTypes } from './types/theme';
 
 // Pages
 import Initial from './Initial';
-import { modeTypes, themeTypes } from './types/theme';
 
 function App() {
   const [theme, setTheme] = useState<themeTypes>('ios');

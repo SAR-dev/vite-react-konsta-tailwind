@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {
   Page,
   Navbar,
@@ -15,12 +15,23 @@ import {
 export default function Initial() {
   const isPreview = document.location.href.includes('examplePreview');
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle('dark');
+  };
+
+  useLayoutEffect(() => {
+    setDarkMode(document.documentElement.classList.contains('dark'));
+  });
+
   const [actionsOneOpened, setActionsOneOpened] = useState(false);
   const [actionsTwoOpened, setActionsTwoOpened] = useState(false);
   return (
     <Page>
       <Navbar title="Action Sheet" />
-      <Block strong inset className="space-y-4">
+      <Block strong inset className="space-y-4 dark:bg-black">
         <p>
           Action Sheet is a slide-up pane for presenting the user with a set of
           alternatives for how to proceed with a given task.
@@ -69,6 +80,9 @@ export default function Initial() {
           </ActionsButton>
         </ActionsGroup>
       </Actions>
+      <Block>
+        <Button onClick={() => toggleDarkMode()}>Toogle</Button>
+      </Block>
     </Page>
   );
 }
