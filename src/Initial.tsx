@@ -42,10 +42,17 @@ export default function Initial({
       >
         <ActionsGroup>
           <ActionsLabel>Do something</ActionsLabel>
-          <ActionsButton onClick={() => setActionsOneOpened(false)} bold>
+          <ActionsButton
+            fontSizeIos="text-base"
+            onClick={() => setActionsOneOpened(false)}
+            bold
+          >
             Button 1
           </ActionsButton>
-          <ActionsButton onClick={() => setActionsOneOpened(false)}>
+          <ActionsButton
+            fontSizeIos="text-base"
+            onClick={() => setActionsOneOpened(false)}
+          >
             Button 2
           </ActionsButton>
           <ActionsButton onClick={() => setActionsOneOpened(false)}>
