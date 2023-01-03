@@ -12,20 +12,13 @@ import {
   ActionsButton,
 } from 'konsta/react';
 
-export default function Initial() {
-  const isPreview = document.location.href.includes('examplePreview');
-
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
-  };
-
-  useLayoutEffect(() => {
-    setDarkMode(document.documentElement.classList.contains('dark'));
-  });
-
+export default function Initial({
+  toggleDarkMode,
+  toogleTheme,
+}: {
+  toggleDarkMode: () => void;
+  toogleTheme: () => void;
+}) {
   const [actionsOneOpened, setActionsOneOpened] = useState(false);
   const [actionsTwoOpened, setActionsTwoOpened] = useState(false);
   return (
@@ -80,8 +73,9 @@ export default function Initial() {
           </ActionsButton>
         </ActionsGroup>
       </Actions>
-      <Block>
-        <Button onClick={() => toggleDarkMode()}>Toogle</Button>
+      <Block strong inset className="flex space-x-4">
+        <Button onClick={() => toggleDarkMode()}>Toogle Mode</Button>
+        <Button onClick={() => toogleTheme()}>Toogle OS</Button>
       </Block>
     </Page>
   );

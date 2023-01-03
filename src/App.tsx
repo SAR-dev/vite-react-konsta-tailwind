@@ -8,6 +8,24 @@ import Initial from './Initial';
 
 function App() {
   const [theme, setTheme] = useState<themeTypes>('ios');
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle('dark');
+  };
+
+  useLayoutEffect(() => {
+    setDarkMode(document.documentElement.classList.contains('dark'));
+  });
+
+  const toogleTheme = () => {
+    if(theme === "ios"){
+      setTheme("material")
+    } else {
+      setTheme("ios")
+    }
+  }
 
   const [currentColorTheme, setCurrentColorTheme] = useState('');
   const setColorTheme = (color: string) => {
@@ -45,7 +63,10 @@ function App() {
     <KonstaApp theme={theme} safeAreas={!inIFrame}>
       <Router>
         <Routes>
-          <Route path="/" element={<Initial />} />
+          <Route
+            path="/"
+            element={<Initial toggleDarkMode={toggleDarkMode} toogleTheme={toogleTheme} />}
+          />
         </Routes>
       </Router>
     </KonstaApp>

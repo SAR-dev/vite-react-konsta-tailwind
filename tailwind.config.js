@@ -6,4 +6,5 @@ module.exports = konstaConfig({
     extend: {},
   },
   plugins: [],
+  darkMode: 'class',
 });
