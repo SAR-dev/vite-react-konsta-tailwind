@@ -5,8 +5,10 @@ import WelcomeSvg from '@src/images/WelcomeSvg';
 export default function Signin() {
   return (
     <Page>
-      <div className="h-screen w-full flex items-center justify-center overflow-hidden relative">
-        <WelcomeSvg />
+      {/* <div className="h-screen w-full flex items-center justify-center overflow-hidden relative">
+        <div className="backdrop-blur-sm bg-black/20 h-screen flex items-center justify-center w-full">
+          <WelcomeSvg />
+        </div>
         <div className="h-screen w-full flex items-center justify-center absolute top-0 left-0">
           <button
             type="button"
@@ -30,11 +32,11 @@ export default function Signin() {
             Sign in with Facebook
           </button>
         </div>
-      </div>
-      {/* <div
+      </div> */}
+      <div
         className="h-screen flex items-center justify-center"
         style={{
-          backgroundImage: `url( 'https://i.ibb.co/BVwWKcQ/Vector-Wallpaper-056-300x585.jpg' )`,
+          backgroundImage: `url( 'https://www.sarahhearts.com/wp-content/uploads/2014/10/nov_2014_wallpaper_6plus.jpg' )`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPositionY: 'bottom',
@@ -61,7 +63,7 @@ export default function Signin() {
           </svg>
           Sign in with Facebook
         </button>
-      </div> */}
+      </div>
     </Page>
   );
 }
