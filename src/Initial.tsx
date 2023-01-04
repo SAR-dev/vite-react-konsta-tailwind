@@ -11,6 +11,7 @@ import {
   ActionsLabel,
   ActionsButton,
 } from 'konsta/react';
+import WelcomeImage from '@images/welcome.jpg';
 
 export default function Initial({
   toggleDarkMode,
@@ -22,7 +23,7 @@ export default function Initial({
   const [actionsOneOpened, setActionsOneOpened] = useState(false);
   const [actionsTwoOpened, setActionsTwoOpened] = useState(false);
   return (
-    <Page>
+    <Page style={{ backgroundImage: `url(${WelcomeImage})` }}>
       <Navbar title="Action Sheet" />
       <Block strong inset className="space-y-4 dark:bg-black">
         <p>
