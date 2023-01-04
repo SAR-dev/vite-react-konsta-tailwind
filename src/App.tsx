@@ -63,15 +63,7 @@ function App() {
     <KonstaApp theme={theme} safeAreas={!inIFrame}>
       <Router>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Signin
-                toggleDarkMode={toggleDarkMode}
-                toogleTheme={toogleTheme}
-              />
-            }
-          />
+          <Route path="/" element={<Signin />} />
         </Routes>
       </Router>
     </KonstaApp>
