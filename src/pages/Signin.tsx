@@ -11,9 +11,8 @@ import {
   ActionsLabel,
   ActionsButton,
 } from 'konsta/react';
-import WelcomeImage from '@images/welcome.jpg';
 
-export default function Initial({
+export default function Signin({
   toggleDarkMode,
   toogleTheme,
 }: {
@@ -31,16 +30,7 @@ export default function Initial({
           backgroundPositionY: 'bottom',
         }}
       >
-        <Button className="w-52 normal-case bg-[#3b5998] hover:bg-[#3b5998]/90">
-          Sign in with Facebook
-        </Button>
-      </div>
-    </Page>
-  );
-}
-
-{
-  /* <button
+        <button
           type="button"
           className="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
         >
@@ -60,5 +50,8 @@ export default function Initial({
             ></path>
           </svg>
           Sign in with Facebook
-        </button> */
+        </button>
+      </div>
+    </Page>
+  );
 }

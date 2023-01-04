@@ -4,7 +4,7 @@ import { App as KonstaApp } from 'konsta/react';
 import { modeTypes, themeTypes } from './types/theme';
 
 // Pages
-import Initial from './Initial';
+import Signin from './pages/Signin';
 
 function App() {
   const [theme, setTheme] = useState<themeTypes>('ios');
@@ -20,12 +20,12 @@ function App() {
   });
 
   const toogleTheme = () => {
-    if(theme === "ios"){
-      setTheme("material")
+    if (theme === 'ios') {
+      setTheme('material');
     } else {
-      setTheme("ios")
+      setTheme('ios');
     }
-  }
+  };
 
   const [currentColorTheme, setCurrentColorTheme] = useState('');
   const setColorTheme = (color: string) => {
@@ -65,7 +65,12 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Initial toggleDarkMode={toggleDarkMode} toogleTheme={toogleTheme} />}
+            element={
+              <Signin
+                toggleDarkMode={toggleDarkMode}
+                toogleTheme={toogleTheme}
+              />
+            }
           />
         </Routes>
       </Router>
