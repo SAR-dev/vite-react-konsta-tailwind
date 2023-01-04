@@ -8,7 +8,8 @@ export default function Signin() {
       <div
         className="h-screen flex items-center justify-center"
         style={{
-          backgroundImage: `url( ${Leaves} )`,
+          // backgroundImage: `url( ${Leaves} )`,
+          backgroundImage: `url( 'https://i.ibb.co/pLnGnKk/image.png' )`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPositionY: 'bottom',
