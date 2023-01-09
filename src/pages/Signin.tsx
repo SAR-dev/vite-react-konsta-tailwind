@@ -6,7 +6,7 @@ export default function Signin() {
   return (
     <Page>
       <div className="relative h-screen flex items-center justify-center">
-        <div className="absolute top-0 right-0">
+        <div className="absolute top-0 right-0 h-screen w-full overflow-hidden">
           <LiveSVG />
         </div>
         <div className="flex flex-col space-y-3 z-0">
