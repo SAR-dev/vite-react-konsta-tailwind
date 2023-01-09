@@ -1,4 +1,3 @@
-import { useState, useLayoutEffect } from 'react';
 import { Page } from 'konsta/react';
 import LiveSVG from '@src/images/LiveSVG';
 
