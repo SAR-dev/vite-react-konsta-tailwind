@@ -1,21 +1,15 @@
 import { useState, useLayoutEffect } from 'react';
 import { Page } from 'konsta/react';
-import Leaves from '@src/images/leaves.jpg';
+import LiveSVG from '@src/images/LiveSVG';
 
 export default function Signin() {
   return (
     <Page>
-      <div
-        className="h-screen flex items-center justify-center"
-        style={{
-          // backgroundImage: `url( ${Leaves} )`,
-          backgroundImage: `url( 'https://i.ibb.co/pLnGnKk/image.png' )`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPositionY: 'bottom',
-        }}
-      >
-        <div className="flex flex-col space-y-3">
+      <div className="relative h-screen flex items-center justify-center">
+        <div className="absolute top-0 right-0">
+          <LiveSVG />
+        </div>
+        <div className="flex flex-col space-y-3 z-0">
           <button
             type="button"
             className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 shadow-lg"
