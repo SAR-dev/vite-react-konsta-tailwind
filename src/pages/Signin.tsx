@@ -1,7 +1,10 @@
 import { Page } from 'konsta/react';
 import LiveSVG from '@src/images/LiveSVG';
+import { useNavigate } from 'react-router-dom';
 
 export default function Signin() {
+  const navigate = useNavigate();
+
   return (
     <Page>
       <div className="relative h-screen flex items-center justify-center">
@@ -12,6 +15,7 @@ export default function Signin() {
           <button
             type="button"
             className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 shadow-lg"
+            onClick={() => navigate('/home')}
           >
             <svg
               className="w-4 h-4 mr-2 -ml-1"
