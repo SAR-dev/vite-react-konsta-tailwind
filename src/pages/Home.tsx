@@ -20,13 +20,22 @@ export default function Home() {
     <Page>
       <Navbar
         title="Navbar"
-        subtitle="Subtitle"
-        className="top-0 sticky"
-        medium={size === 'Medium'}
-        large={size === 'Large'}
+        className="top-0 sticky h-12 flex items-center"
         transparent={isTransparent}
         right={<Link navbar>Right</Link>}
-        left={<NavbarBackLink text="Back" onClick={() => history.back()} />}
+        left={
+          <div className="flex space-x-2 items-center">
+            <img
+              src="https://i.postimg.cc/T2bMxdn9/image.png"
+              className="h-8 w-8 object-cover rounded-full"
+              alt=""
+            />
+            <div className="space-y-.5">
+              <p className="font-semibold text-sm">Sayed Rafi</p>
+              <p className="text-xs">Level 10</p>
+            </div>
+          </div>
+        }
       />
       <div className="relative">
         <Block strong inset>
