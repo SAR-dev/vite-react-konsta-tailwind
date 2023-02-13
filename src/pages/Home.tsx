@@ -19,8 +19,7 @@ export default function Home() {
   return (
     <Page>
       <Navbar
-        title="Navbar"
-        className="top-0 sticky h-12 flex items-center"
+        className="top-0 sticky h-16 flex items-center px-3"
         transparent={isTransparent}
         right={<Link navbar>Right</Link>}
         left={
