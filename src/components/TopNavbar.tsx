@@ -12,10 +12,10 @@ const TopNavbar = () => {
       transparent={isTransparent}
       right={
         <div className="flex space-x-2 items-center">
-          <button className="bg-gray-200 flex border h-8 w-8 items-center justify-center rounded-full">
+          <button className="btn btn-circle btn-sm btn-outline">
             <MdOutlineNotificationsActive />
           </button>
-          <button className="bg-gray-200 flex border h-8 w-8 items-center justify-center rounded-full">
+          <button className="btn btn-circle btn-sm btn-outline">
             <RiSettingsLine />
           </button>
         </div>
