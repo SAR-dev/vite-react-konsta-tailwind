@@ -5,6 +5,6 @@ module.exports = konstaConfig({
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('kutty')],
   darkMode: 'class',
 });
