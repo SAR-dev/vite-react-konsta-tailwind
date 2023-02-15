@@ -43,7 +43,7 @@ export default function Home() {
             Voluptates, repellendus odit, magni nesciunt, optio laborum
             asperiores repudiandae consectetur suscipit ab cupiditate eum.
           </p>
-          <div className="h-96 carousel carousel-vertical rounded-box">
+          <div className="h-96 carousel carousel-vertical rounded-md">
             <div className="carousel-item h-full">
               <img
                 className="w-full object-cover"
