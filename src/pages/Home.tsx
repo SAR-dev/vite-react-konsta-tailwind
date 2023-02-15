@@ -18,17 +18,6 @@ export default function Home() {
     <Page>
       <TopNavbar />
       <div className="relative">
-        <Block strong inset>
-          <p>
-            Navbar is a fixed area at the top of a screen that contains Page
-            title and navigation elements.
-          </p>
-        </Block>
-
-        <BlockTitle>Size</BlockTitle>
-        <BlockHeader>
-          Medium and Large will collapse to usual size on page scroll
-        </BlockHeader>
         <List strong inset>
           {['Default', 'Medium', 'Large'].map((v) => (
             <ListItem
