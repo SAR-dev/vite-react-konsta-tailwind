@@ -19,18 +19,22 @@ export default function Home() {
   return (
     <Page>
       <Navbar
-        className="top-0 sticky h-16 flex items-center px-3"
+        className="top-0 sticky h-10 flex items-center px-3"
         transparent={isTransparent}
-        right={<Link navbar>Right</Link>}
+        right={
+          <div className="flex space-x-2 items-center">
+            <Link navbar>Right</Link>
+          </div>
+        }
         left={
           <div className="flex space-x-2 items-center">
             <img
               src="https://i.postimg.cc/T2bMxdn9/image.png"
-              className="h-8 w-8 object-cover rounded-full"
+              className="h-7 w-7 object-cover rounded-full"
               alt=""
             />
             <div className="space-y-.5">
-              <p className="font-semibold text-sm">Sayed Rafi</p>
+              <p className="font-semibold text-xs">Sayed Rafi</p>
               <p className="text-xs">Level 10</p>
             </div>
           </div>

@@ -15,7 +15,8 @@
     "react-dom": "^18.2.0",
     "react-image": "^4.0.3",
     "react-router-dom": "^6.3.0",
-    "tabler-icons-react": "^1.56.0"
+    "tabler-icons-react": "^1.56.0",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@types/date-fns": "^2.6.0",
