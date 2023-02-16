@@ -31,18 +31,20 @@ export default function Home() {
               <BsThreeDots size={20} />
             </button>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            tempore ratione unde accusantium distinctio nulla quia numquam earum
-            odio, optio, nisi rem deserunt. Molestiae delectus, ut assumenda
-            numquam magni enim.
-          </p>
-          <p>
-            Architecto molestias cum dolor dolorem provident consequuntur
-            incidunt sunt fugiat tenetur odio, recusandae placeat rem veniam.
-            Voluptates, repellendus odit, magni nesciunt, optio laborum
-            asperiores repudiandae consectetur suscipit ab cupiditate eum.
-          </p>
+          <div className="space-y-3 line-clamp-6">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              tempore ratione unde accusantium distinctio nulla quia numquam
+              earum odio, optio, nisi rem deserunt. Molestiae delectus, ut
+              assumenda numquam magni enim.
+            </p>
+            <p>
+              Architecto molestias cum dolor dolorem provident consequuntur
+              incidunt sunt fugiat tenetur odio, recusandae placeat rem veniam.
+              Voluptates, repellendus odit, magni nesciunt, optio laborum
+              asperiores repudiandae consectetur suscipit ab cupiditate eum.
+            </p>
+          </div>
           <div className="h-96 carousel carousel-vertical rounded-md">
             <div className="carousel-item h-full">
               <img
