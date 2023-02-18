@@ -3,6 +3,9 @@ import { Page, Block } from 'konsta/react';
 import TopNavbar from '@src/components/TopNavbar';
 import { FaUserCircle } from 'react-icons/fa';
 import { GiAmericanFootballHelmet } from 'react-icons/gi';
+import { HiStatusOnline } from 'react-icons/hi';
+import { RiHeart2Line, RiTimeLine, RiChat1Line } from 'react-icons/ri';
+import { MdSignalWifiStatusbar2Bar } from 'react-icons/md';
 
 export default function Home() {
   return (
@@ -89,8 +92,29 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex space-x-3">
-            
+          <div className="flex items-center">
+            <div className="flex items-center space-x-1">
+              <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-blue-200/50 hover:text-blue-600">
+                <RiHeart2Line size={18} />
+                <div>30</div>
+              </button>
+              <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-pink-200/50 hover:text-pink-600">
+                <RiChat1Line size={18} />
+                <div>30</div>
+              </button>
+              <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-green-200/50 hover:text-green-600">
+                <HiStatusOnline size={18} />
+                <div>30</div>
+              </button>
+              <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-green-200/50 hover:text-green-600">
+                <MdSignalWifiStatusbar2Bar size={18} />
+                <div>0.7</div>
+              </button>
+            </div>
+            <div className="flex items-center space-x-1 ml-auto">
+              <RiTimeLine size={18} />
+              <div>3d 2m</div>
+            </div>
           </div>
         </Block>
       </div>
