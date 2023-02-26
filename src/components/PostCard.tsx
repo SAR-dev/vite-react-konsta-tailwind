@@ -1,5 +1,12 @@
+import { useState } from 'react';
 import { BsThreeDots } from 'react-icons/bs';
-import { Block } from 'konsta/react';
+import {
+  Block,
+  Actions,
+  ActionsGroup,
+  ActionsLabel,
+  ActionsButton,
+} from 'konsta/react';
 import { FaUserCircle } from 'react-icons/fa';
 import { GiAmericanFootballHelmet } from 'react-icons/gi';
 import { HiStatusOnline } from 'react-icons/hi';
@@ -13,6 +20,7 @@ interface PostCardInterface {
 }
 
 const PostCard = (props: PostCardInterface) => {
+  const [showOptions, setShowOptions] = useState(false);
   return (
     <div className="relative">
       <Block strong inset className="space-y-4">
@@ -33,7 +41,10 @@ const PostCard = (props: PostCardInterface) => {
               </div>
             </div>
           </div>
-          <button className="ml-auto btn btn-xs btn-ghost">
+          <button
+            className="ml-auto btn btn-xs btn-ghost"
+            onClick={() => setShowOptions(true)}
+          >
             <BsThreeDots size={20} />
           </button>
         </div>
@@ -90,6 +101,28 @@ const PostCard = (props: PostCardInterface) => {
           </div>
         </div>
       </Block>
+      <Actions
+        opened={showOptions}
+        onBackdropClick={() => setShowOptions(false)}
+      >
+        <ActionsGroup>
+          <ActionsLabel>Hope this helps you</ActionsLabel>
+          <ActionsButton onClick={() => setShowOptions(false)}>
+            Save
+          </ActionsButton>
+          <ActionsButton onClick={() => setShowOptions(false)}>
+            Delete
+          </ActionsButton>
+          <ActionsButton onClick={() => setShowOptions(false)}>
+            Report
+          </ActionsButton>
+        </ActionsGroup>
+        <ActionsGroup>
+          <ActionsButton onClick={() => setShowOptions(false)} bold>
+            Cancel
+          </ActionsButton>
+        </ActionsGroup>
+      </Actions>
     </div>
   );
 };
