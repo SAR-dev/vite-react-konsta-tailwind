@@ -22,11 +22,11 @@ const CommentsPopup = ({
     <Popup opened={show} onBackdropClick={() => setShow(false)}>
       <Page>
         <Navbar
-          className="px-3"
+          className="px-3 bg-white"
           right={<PostActions setShowComments={setShowComments} />}
           left={
             <button
-              className="btn btn-outline btn-xs"
+              className="rounded-md btn btn-sm bg-gray-200/75 border-0 text-gray-700 border-0 text-gray-700 hover:bg-red-200/50 hover:text-red-600"
               onClick={() => setShow(false)}
             >
               Back
