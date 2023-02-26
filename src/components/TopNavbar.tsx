@@ -5,8 +5,13 @@ import { FaUserCircle } from 'react-icons/fa';
 import { RiSettingsLine } from 'react-icons/ri';
 import { IoTicketOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
+import { HiOutlineArrowLeft } from 'react-icons/hi';
 
-const TopNavbar = () => {
+interface TopNavbarInterface {
+  title?: string;
+}
+
+const TopNavbar = (props: TopNavbarInterface) => {
   const navigate = useNavigate();
   const [isTransparent, setIsTransparent] = useState(false);
   return (
@@ -14,17 +19,26 @@ const TopNavbar = () => {
       className="top-0 sticky h-14 flex items-center px-3"
       transparent={isTransparent}
       left={
-        <div className="flex space-x-3 items-center">
-          <div className="avatar">
-            <div className="rounded-full ring ring-gray-500 ring-offset-base-100 ring-offset-2">
-              <FaUserCircle size={30} />
+        props.title ? (
+          <div className="flex items-center space-x-3">
+            <button className="hover:text-red-600" onClick={() => navigate(-1)}>
+              <HiOutlineArrowLeft />
+            </button>
+            <div className="font-semibold">{props.title}</div>
+          </div>
+        ) : (
+          <div className="flex space-x-3 items-center">
+            <div className="avatar">
+              <div className="rounded-full ring ring-gray-500 ring-offset-base-100 ring-offset-2">
+                <FaUserCircle size={30} />
+              </div>
+            </div>
+            <div className="space-y-.5">
+              <p className="font-semibold text-sm">Sayed Rafi</p>
+              <p className="text-xs">Level 10</p>
             </div>
           </div>
-          <div className="space-y-.5">
-            <p className="font-semibold text-sm">Sayed Rafi</p>
-            <p className="text-xs">Level 10</p>
-          </div>
-        </div>
+        )
       }
       right={
         <div className="flex space-x-2 items-center">
