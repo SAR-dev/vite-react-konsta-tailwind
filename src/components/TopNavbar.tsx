@@ -6,17 +6,39 @@ import { RiSettingsLine } from 'react-icons/ri';
 import { IoTicketOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
-import useScrollPercentage from '@src/hooks/useScrollPercentage';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 interface TopNavbarInterface {
   title?: string;
   option?: ReactNode;
 }
 
+interface ScrollPosition {
+  prevPos: {
+    x: number;
+    y: number;
+  };
+  currPos: {
+    x: number;
+    y: number;
+  };
+}
+
 const TopNavbar = (props: TopNavbarInterface) => {
   const navigate = useNavigate();
   const [isTransparent, setIsTransparent] = useState(false);
-  const scrollPercentage: number = useScrollPercentage();
+  const [hideOnScroll, setHideOnScroll] = useState(true);
+
+  useScrollPosition(
+    ({ prevPos, currPos }: ScrollPosition) => {
+      const isShow = currPos.y > prevPos.y;
+      if (isShow !== hideOnScroll) setHideOnScroll(isShow);
+    },
+    [hideOnScroll],
+    false,
+    false,
+    300
+  );
 
   return (
     <Navbar
@@ -45,7 +67,7 @@ const TopNavbar = (props: TopNavbarInterface) => {
         )
       }
       right={
-        props.option && scrollPercentage > 10 ? (
+        props.option && !hideOnScroll ? (
           <>{props.option}</>
         ) : (
           <div className="flex space-x-2 items-center">
