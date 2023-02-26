@@ -5,6 +5,7 @@ import { GiAmericanFootballHelmet } from 'react-icons/gi';
 import { HiStatusOnline } from 'react-icons/hi';
 import { RiHeart2Line, RiTimeLine, RiChat1Line } from 'react-icons/ri';
 import { MdSignalWifiStatusbar2Bar } from 'react-icons/md';
+import ReactPlayer from 'react-player';
 
 interface PostCardInterface {
   images?: string[];
@@ -50,13 +51,18 @@ const PostCard = (props: PostCardInterface) => {
             asperiores repudiandae consectetur suscipit ab cupiditate eum.
           </p>
         </div>
-        {props.images?.length !== 0 && (
+        {props.images && props.images.length !== 0 && (
           <div className="h-96 carousel carousel-vertical rounded-md">
             {props.images?.map((src, i) => (
               <div className="carousel-item h-full" key={i}>
                 <img className="w-full object-cover" src={src} />
               </div>
             ))}
+          </div>
+        )}
+        {!props.images && props.video && (
+          <div className="flex w-full">
+            <ReactPlayer url={props.video} />
           </div>
         )}
         <div className="flex items-center">
