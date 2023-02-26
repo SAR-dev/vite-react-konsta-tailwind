@@ -12,22 +12,10 @@ const CommentCard = () => {
       </div>
       <div className="space-y-.5">
         <div className="flex items-center">
-          <div className="flex items-center space-x-3">
-            <p className="font-semibold text-sm">Sayed Rafi</p>
-            <p className="font-semibold text-xs flex items-center space-x-.5">
-              <HiArrowSmUp className="text-blue-500" /> 33%
-            </p>
-          </div>
-          <div className="ml-auto">
-            <button className="btn btn-xs btn-ghost gap-2">
-              <AiOutlineLike size={16} />
-              Like
-            </button>
-            <button className="btn btn-xs btn-ghost gap-2">
-              <AiOutlineDislike size={16} />
-              Unlike
-            </button>
-          </div>
+          <p className="font-semibold text-sm">Sayed Rafi</p>
+          <p className="font-semibold text-xs flex items-center space-x-.5 ml-auto">
+            <HiArrowSmUp className="text-blue-500" /> 33%
+          </p>
         </div>
         <div className="flex items-start space-x-1">
           <div>

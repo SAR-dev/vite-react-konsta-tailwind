@@ -1,5 +1,5 @@
 import { Page, Navbar, Popup, Block, Link, Button } from 'konsta/react';
-import { HiArrowNarrowLeft } from 'react-icons/hi';
+import { HiArrowNarrowLeft, HiOutlineArrowLeft } from 'react-icons/hi';
 import {
   AiFillDislike,
   AiFillLike,
@@ -26,10 +26,10 @@ const CommentsPopup = ({
           right={<PostActions setShowComments={setShowComments} />}
           left={
             <button
-              className="rounded-md btn btn-sm bg-gray-200/75 border-0 text-gray-700 border-0 text-gray-700 hover:bg-red-200/50 hover:text-red-600"
+              className="hover:text-red-600"
               onClick={() => setShow(false)}
             >
-              Back
+              <HiOutlineArrowLeft />
             </button>
           }
         />
