@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { Navbar, Link } from 'konsta/react';
 import { MdOutlineNotificationsActive } from 'react-icons/md';
 import { FaUserCircle } from 'react-icons/fa';
@@ -6,14 +6,18 @@ import { RiSettingsLine } from 'react-icons/ri';
 import { IoTicketOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
+import useScrollPercentage from '@src/hooks/useScrollPercentage';
 
 interface TopNavbarInterface {
   title?: string;
+  option?: ReactNode;
 }
 
 const TopNavbar = (props: TopNavbarInterface) => {
   const navigate = useNavigate();
   const [isTransparent, setIsTransparent] = useState(false);
+  const scrollPercentage: number = useScrollPercentage();
+
   return (
     <Navbar
       className="top-0 sticky h-14 flex items-center px-3"
@@ -41,23 +45,27 @@ const TopNavbar = (props: TopNavbarInterface) => {
         )
       }
       right={
-        <div className="flex space-x-2 items-center">
-          <button
-            className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10"
-            onClick={() => navigate('/events/1')}
-          >
-            <IoTicketOutline size={20} />
-          </button>
-          <button className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10">
-            <RiSettingsLine size={20} />
-          </button>
-          <button className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10">
-            <div className="indicator">
-              <MdOutlineNotificationsActive size={20} />
-              <span className="badge badge-xs badge-primary indicator-item"></span>
-            </div>
-          </button>
-        </div>
+        props.option && scrollPercentage > 10 ? (
+          <>{props.option}</>
+        ) : (
+          <div className="flex space-x-2 items-center">
+            <button
+              className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10"
+              onClick={() => navigate('/events/1')}
+            >
+              <IoTicketOutline size={20} />
+            </button>
+            <button className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10">
+              <RiSettingsLine size={20} />
+            </button>
+            <button className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10">
+              <div className="indicator">
+                <MdOutlineNotificationsActive size={20} />
+                <span className="badge badge-xs badge-primary indicator-item"></span>
+              </div>
+            </button>
+          </div>
+        )
       }
     />
   );
