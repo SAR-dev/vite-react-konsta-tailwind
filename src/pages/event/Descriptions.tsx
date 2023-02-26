@@ -27,7 +27,8 @@ const EventDescription = () => {
             alt=""
           />
         </div>
-        
+        {/* Host */}
+        {/* Sponsor */}
       </div>
     </Page>
   );
