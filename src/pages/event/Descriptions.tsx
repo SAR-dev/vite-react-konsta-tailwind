@@ -6,12 +6,15 @@ import { RiAdminFill } from 'react-icons/ri';
 import { MdAvTimer, MdMoney, MdMyLocation, MdPlace } from 'react-icons/md';
 import { SiGooglemaps } from 'react-icons/si';
 import { ImCalendar } from 'react-icons/im';
+import { RxChevronUp, RxMinus, RxPlus } from 'react-icons/rx';
+import { AccordionItem, AccordionWrapper } from '@src/components/Accordion';
 
 const id = 'event-description';
 
 const EventDescription = () => {
   const scrollPosition = useScrollPosition(id);
   const [activeSegmented, setActiveSegmented] = useState(1);
+  const [showAll, setShowAll] = useState(false);
 
   return (
     <Page id={id}>
@@ -97,6 +100,57 @@ const EventDescription = () => {
         </p>
       </Block>
 
+      <Block strong inset className="space-y-4 mt-4">
+        <div className="flex items-center justify-between px-1">
+          <p className="font-semibold">Read Carefully</p>
+          <button
+            className="hover:text-blue-500"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? <RxMinus /> : <RxPlus />}
+          </button>
+        </div>
+
+        <AccordionWrapper>
+          <AccordionItem title="Behave well" opened={showAll}>
+            <div>
+              <strong>This is the first item's accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </AccordionItem>
+          <AccordionItem title="Behave well" opened={showAll}>
+            <div>
+              <strong>This is the first item's accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </AccordionItem>
+          <AccordionItem title="Behave well" opened={showAll}>
+            <div>
+              <strong>This is the first item's accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </AccordionItem>
+        </AccordionWrapper>
+      </Block>
+
       <Block strong inset className="space-y-6 mt-4">
         <div className="space-y-4">
           <p className="font-semibold">Platinum Sponsors</p>
@@ -142,6 +196,27 @@ const EventDescription = () => {
         </div>
         <div className="space-y-4">
           <p className="font-semibold">Silver Sponsors</p>
+          <div className="grid grid-cols-2 gap-3">
+            <a href="" className="flex space-x-2 items-center font-semibold">
+              <img
+                className="h-8 w-8"
+                src="https://i.ibb.co/d7FJx2d/image.png"
+                alt=""
+              />
+              <p>Gitlab</p>
+            </a>
+            <a href="" className="flex space-x-2 items-center font-semibold">
+              <img
+                className="h-8 w-8"
+                src="https://i.ibb.co/SnNFJtk/image.png"
+                alt=""
+              />
+              <p>Facebook</p>
+            </a>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <p className="font-semibold">Special Thanks</p>
           <div className="grid grid-cols-2 gap-3">
             <a href="" className="flex space-x-2 items-center font-semibold">
               <img
