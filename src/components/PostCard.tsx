@@ -14,6 +14,8 @@ import { RiHeart2Line, RiTimeLine, RiChat1Line } from 'react-icons/ri';
 import { MdSignalWifiStatusbar2Bar } from 'react-icons/md';
 import ReactPlayer from 'react-player';
 import classNames from 'classnames';
+import CommentsPopup from './CommentsPopup';
+import PostOptionsAction from './PostOptionsAction';
 
 interface PostCardInterface {
   images?: string[];
@@ -22,6 +24,7 @@ interface PostCardInterface {
 
 const PostCard = (props: PostCardInterface) => {
   const [showOptions, setShowOptions] = useState(false);
+  const [showComments, setShowComments] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -91,7 +94,10 @@ const PostCard = (props: PostCardInterface) => {
               <RiHeart2Line size={18} />
               <div>30</div>
             </button>
-            <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-pink-200/50 hover:text-pink-600">
+            <button
+              className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-pink-200/50 hover:text-pink-600"
+              onClick={() => setShowComments(true)}
+            >
               <RiChat1Line size={18} />
               <div>30</div>
             </button>
@@ -110,28 +116,8 @@ const PostCard = (props: PostCardInterface) => {
           </div>
         </div>
       </Block>
-      <Actions
-        opened={showOptions}
-        onBackdropClick={() => setShowOptions(false)}
-      >
-        <ActionsGroup>
-          <ActionsLabel>Hope this helps you</ActionsLabel>
-          <ActionsButton onClick={() => setShowOptions(false)}>
-            Save
-          </ActionsButton>
-          <ActionsButton onClick={() => setShowOptions(false)}>
-            Delete
-          </ActionsButton>
-          <ActionsButton onClick={() => setShowOptions(false)}>
-            Report
-          </ActionsButton>
-        </ActionsGroup>
-        <ActionsGroup>
-          <ActionsButton onClick={() => setShowOptions(false)} bold>
-            Cancel
-          </ActionsButton>
-        </ActionsGroup>
-      </Actions>
+      <PostOptionsAction show={showOptions} setShow={setShowOptions} />
+      <CommentsPopup show={showComments} setShow={setShowComments} />
     </div>
   );
 };
