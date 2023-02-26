@@ -1,12 +1,23 @@
 import TopNavbar from '@src/components/TopNavbar';
+import useScrollPosition from '@src/hooks/useScrollPosition';
 import { Page, Block } from 'konsta/react';
+import { useRef } from 'react';
+
+const id = 'event-description';
 
 const EventDescription = () => {
+  const scrollPosition = useScrollPosition(id);
+
   return (
-    <Page>
+    <Page id={id}>
       <TopNavbar
         title="Takayama Festival"
-        option={<button className="btn btn-primary">(50$) Buy Ticket</button>}
+        right={{
+          component: (
+            <button className="btn btn-primary btn-sm">(50$) Buy Ticket</button>
+          ),
+          show: scrollPosition > 50,
+        }}
       />
       <div className="space-y-3">
         <div className="relative">
@@ -16,7 +27,7 @@ const EventDescription = () => {
             alt=""
           />
         </div>
-        <div style={{ height: '200vh' }}></div>
+        
       </div>
     </Page>
   );

@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Navbar, Link } from 'konsta/react';
 import { MdOutlineNotificationsActive } from 'react-icons/md';
 import { FaUserCircle } from 'react-icons/fa';
@@ -6,39 +6,18 @@ import { RiSettingsLine } from 'react-icons/ri';
 import { IoTicketOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 interface TopNavbarInterface {
   title?: string;
-  option?: ReactNode;
-}
-
-interface ScrollPosition {
-  prevPos: {
-    x: number;
-    y: number;
-  };
-  currPos: {
-    x: number;
-    y: number;
+  right?: {
+    component: ReactNode;
+    show: boolean;
   };
 }
 
 const TopNavbar = (props: TopNavbarInterface) => {
   const navigate = useNavigate();
   const [isTransparent, setIsTransparent] = useState(false);
-  const [hideOnScroll, setHideOnScroll] = useState(true);
-
-  useScrollPosition(
-    ({ prevPos, currPos }: ScrollPosition) => {
-      const isShow = currPos.y > prevPos.y;
-      if (isShow !== hideOnScroll) setHideOnScroll(isShow);
-    },
-    [hideOnScroll],
-    false,
-    false,
-    300
-  );
 
   return (
     <Navbar
@@ -67,8 +46,10 @@ const TopNavbar = (props: TopNavbarInterface) => {
         )
       }
       right={
-        props.option && !hideOnScroll ? (
-          <>{props.option}</>
+        props.right && props.right.show ? (
+          <div className="ease-in-out duration-300">
+            {props.right.component}
+          </div>
         ) : (
           <div className="flex space-x-2 items-center">
             <button
