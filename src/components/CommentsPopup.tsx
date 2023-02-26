@@ -23,10 +23,10 @@ const CommentsPopup = ({
       <Page>
         <Navbar
           className="px-3"
-          left={<PostActions setShowComments={setShowComments} />}
-          right={
+          right={<PostActions setShowComments={setShowComments} />}
+          left={
             <button
-              className="btn btn-ghost btn-xs"
+              className="btn btn-outline btn-xs"
               onClick={() => setShow(false)}
             >
               Back
