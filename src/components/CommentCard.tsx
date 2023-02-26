@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { AiOutlineDislike, AiOutlineLike } from 'react-icons/ai';
 import { BsThreeDots } from 'react-icons/bs';
 import { FaUserCircle } from 'react-icons/fa';
 import { HiArrowSmUp, HiArrowSmDown } from 'react-icons/hi';
 import CommentActions from './CommentActions';
-import { useLongPress } from 'use-long-press';
+import CommentOptionsAction from './CommentOptionsAction';
 
 const CommentCard = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -19,7 +18,7 @@ const CommentCard = () => {
         <div className="flex items-center">
           <p className="font-semibold text-sm">Sayed Rafi</p>
           <div className="ml-auto flex items-center space-x-2">
-            <p className="font-semibold text-xs flex items-center space-x-.5">
+            <p className="text-xs flex items-center space-x-.5 ml-auto">
               <HiArrowSmUp className="text-blue-500" /> 33%
             </p>
             <button
@@ -30,13 +29,19 @@ const CommentCard = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-start space-x-1">
+        <div className="space-y-1">
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             faucibus mauris leo, eu bibendum neque congue non. Ut leo mauris
           </div>
+          <img
+            className="h-32 rounded"
+            src="https://cdn4.buysellads.net/uu/1/127419/1670531697-AdobeTeams.jpg"
+            alt=""
+          />
         </div>
         <CommentActions />
+        <CommentOptionsAction show={showOptions} setShow={setShowOptions} />
       </div>
     </div>
   );
