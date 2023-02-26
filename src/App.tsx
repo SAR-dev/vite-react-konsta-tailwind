@@ -6,6 +6,7 @@ import { modeTypes, themeTypes } from './types/theme';
 // Pages
 import Signin from './pages/Signin';
 import Home from './pages/Home';
+import EventDescription from './pages/event/Descriptions';
 
 function App() {
   const [theme, setTheme] = useState<themeTypes>('ios');
@@ -66,6 +67,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/events/:event_id" element={<EventDescription />} />
         </Routes>
       </Router>
     </KonstaApp>

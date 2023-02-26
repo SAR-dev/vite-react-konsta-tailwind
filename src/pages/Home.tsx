@@ -1,4 +1,3 @@
-import { BsThreeDots } from 'react-icons/bs';
 import { Page, Block } from 'konsta/react';
 import TopNavbar from '@src/components/TopNavbar';
 import PostCard from '@src/components/PostCard';
