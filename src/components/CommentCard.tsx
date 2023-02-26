@@ -5,9 +5,9 @@ import { HiArrowSmUp, HiArrowSmDown } from 'react-icons/hi';
 const CommentCard = () => {
   return (
     <div className="flex space-x-3 items-start">
-      <div className="avatar">
+      <div className="avatar mt-1">
         <div className="rounded-full">
-          <FaUserCircle size={30} />
+          <FaUserCircle size={20} />
         </div>
       </div>
       <div className="space-y-.5">

@@ -16,6 +16,7 @@ import ReactPlayer from 'react-player';
 import classNames from 'classnames';
 import CommentsPopup from './CommentsPopup';
 import PostOptionsAction from './PostOptionsAction';
+import PostActions from './PostActions';
 
 interface PostCardInterface {
   images?: string[];
@@ -89,27 +90,7 @@ const PostCard = (props: PostCardInterface) => {
           </div>
         )}
         <div className="flex items-center">
-          <div className="flex items-center space-x-1">
-            <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-blue-200/50 hover:text-blue-600">
-              <RiHeart2Line size={18} />
-              <div>30</div>
-            </button>
-            <button
-              className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-pink-200/50 hover:text-pink-600"
-              onClick={() => setShowComments(true)}
-            >
-              <RiChat1Line size={18} />
-              <div>30</div>
-            </button>
-            <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-green-200/50 hover:text-green-600">
-              <HiStatusOnline size={18} />
-              <div>30</div>
-            </button>
-            <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-green-200/50 hover:text-green-600">
-              <MdSignalWifiStatusbar2Bar size={18} />
-              <div>0.7</div>
-            </button>
-          </div>
+          <PostActions setShowComments={setShowComments} />
           <div className="flex items-center space-x-1 ml-auto">
             <RiTimeLine size={18} />
             <div>3d 2m</div>
@@ -117,7 +98,11 @@ const PostCard = (props: PostCardInterface) => {
         </div>
       </Block>
       <PostOptionsAction show={showOptions} setShow={setShowOptions} />
-      <CommentsPopup show={showComments} setShow={setShowComments} />
+      <CommentsPopup
+        show={showComments}
+        setShow={setShowComments}
+        setShowComments={setShowComments}
+      />
     </div>
   );
 };
