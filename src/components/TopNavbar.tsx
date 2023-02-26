@@ -3,6 +3,7 @@ import { Navbar } from 'konsta/react';
 import { MdOutlineNotificationsActive } from 'react-icons/md';
 import { FaUserCircle } from 'react-icons/fa';
 import { RiSettingsLine } from 'react-icons/ri';
+import { IoTicketOutline } from 'react-icons/io5';
 
 const TopNavbar = () => {
   const [isTransparent, setIsTransparent] = useState(false);
@@ -25,6 +26,9 @@ const TopNavbar = () => {
       }
       right={
         <div className="flex space-x-2 items-center">
+          <button className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10">
+            <IoTicketOutline size={20} />
+          </button>
           <button className="btn btn-sm btn-ghost btn-circle bg-gray-200/50 h-10 w-10">
             <RiSettingsLine size={20} />
           </button>
