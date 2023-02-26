@@ -13,6 +13,7 @@ import { HiStatusOnline } from 'react-icons/hi';
 import { RiHeart2Line, RiTimeLine, RiChat1Line } from 'react-icons/ri';
 import { MdSignalWifiStatusbar2Bar } from 'react-icons/md';
 import ReactPlayer from 'react-player';
+import classNames from 'classnames';
 
 interface PostCardInterface {
   images?: string[];
@@ -21,6 +22,8 @@ interface PostCardInterface {
 
 const PostCard = (props: PostCardInterface) => {
   const [showOptions, setShowOptions] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div className="relative">
       <Block strong inset className="space-y-4">
@@ -48,7 +51,13 @@ const PostCard = (props: PostCardInterface) => {
             <BsThreeDots size={20} />
           </button>
         </div>
-        <div className="space-y-3 line-clamp-6">
+        <div
+          className={classNames({
+            'space-y-3': true,
+            'line-clamp-6': !expanded,
+          })}
+          onClick={() => setExpanded(!expanded)}
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
             tempore ratione unde accusantium distinctio nulla quia numquam earum
