@@ -36,33 +36,35 @@ const EventDescription = () => {
           alt=""
         />
       </div>
-      <Segmented strong>
-        <SegmentedButton
-          strong
-          active={activeSegmented === 1}
-          onClick={() => setActiveSegmented(1)}
-          className="py-5"
-        >
-          Details
-        </SegmentedButton>
-        <SegmentedButton
-          strong
-          active={activeSegmented === 2}
-          onClick={() => setActiveSegmented(2)}
-          className="py-5"
-        >
-          Discussion
-        </SegmentedButton>
-        <SegmentedButton
-          strong
-          active={activeSegmented === 3}
-          onClick={() => setActiveSegmented(3)}
-          className="py-5"
-        >
-          Gallery
-        </SegmentedButton>
-      </Segmented>
-      <Block strong inset className="space-y-4 mt-4">
+      <div className="mt-2 mx-4">
+        <Segmented strong>
+          <SegmentedButton
+            strong
+            active={activeSegmented === 1}
+            onClick={() => setActiveSegmented(1)}
+            className="py-5"
+          >
+            Details
+          </SegmentedButton>
+          <SegmentedButton
+            strong
+            active={activeSegmented === 2}
+            onClick={() => setActiveSegmented(2)}
+            className="py-5"
+          >
+            Discussion
+          </SegmentedButton>
+          <SegmentedButton
+            strong
+            active={activeSegmented === 3}
+            onClick={() => setActiveSegmented(3)}
+            className="py-5"
+          >
+            Gallery
+          </SegmentedButton>
+        </Segmented>
+      </div>
+      <Block inset strong className="space-y-4 mt-2">
         <div className="grid grid-cols-1 gap-3">
           <div className="flex space-x-2 items-center">
             <RiAdminFill size={20} />
@@ -163,6 +165,22 @@ const EventDescription = () => {
                 alt=""
               />
               <p>Gitlab</p>
+            </a>
+            <a href="" className="flex space-x-2 items-center font-semibold">
+              <img
+                className="h-8 w-8"
+                src="https://i.ibb.co/SnNFJtk/image.png"
+                alt=""
+              />
+              <p>Facebook</p>
+            </a>
+            <a href="" className="flex space-x-2 items-center font-semibold">
+              <img
+                className="h-8 w-8"
+                src="https://i.ibb.co/SnNFJtk/image.png"
+                alt=""
+              />
+              <p>Facebook</p>
             </a>
             <a href="" className="flex space-x-2 items-center font-semibold">
               <img
