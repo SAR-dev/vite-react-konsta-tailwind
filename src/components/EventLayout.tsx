@@ -1,21 +1,8 @@
-import { ReactNode, useRef, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import TopNavbar from '@src/components/TopNavbar';
 import useScrollPosition from '@src/hooks/useScrollPosition';
-import { Page, Block, Segmented, SegmentedButton, Link } from 'konsta/react';
-import { RiAdminFill, RiMapPin5Fill } from 'react-icons/ri';
-import {
-  MdAvTimer,
-  MdMoney,
-  MdMyLocation,
-  MdOutlineEmojiPeople,
-  MdPlace,
-} from 'react-icons/md';
-import { SiGooglemaps } from 'react-icons/si';
-import { ImCalendar } from 'react-icons/im';
-import { RxChevronUp, RxMinus, RxPlus } from 'react-icons/rx';
-import { AccordionItem, AccordionWrapper } from '@src/components/Accordion';
-import { FaMapMarkerAlt } from 'react-icons/fa';
-import { BsArrow90DegRight } from 'react-icons/bs';
+import { Page, Segmented, SegmentedButton } from 'konsta/react';
+import { MdOutlineEmojiPeople } from 'react-icons/md';
 
 const id = 'event-description';
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BsThreeDots } from 'react-icons/bs';
 import { FaUserCircle } from 'react-icons/fa';
-import { HiArrowSmUp, HiArrowSmDown } from 'react-icons/hi';
+import { HiArrowSmUp } from 'react-icons/hi';
 import CommentActions from './CommentActions';
 import CommentOptionsAction from './CommentOptionsAction';
 

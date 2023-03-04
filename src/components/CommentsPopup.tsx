@@ -1,11 +1,5 @@
-import { Page, Navbar, Popup, Block, Link, Button } from 'konsta/react';
-import { HiArrowNarrowLeft, HiOutlineArrowLeft } from 'react-icons/hi';
-import {
-  AiFillDislike,
-  AiFillLike,
-  AiOutlineDislike,
-  AiOutlineLike,
-} from 'react-icons/ai';
+import { Page, Navbar, Popup, Block } from 'konsta/react';
+import { HiOutlineArrowLeft } from 'react-icons/hi';
 import CommentCard from './CommentCard';
 import PostActions from './PostActions';
 

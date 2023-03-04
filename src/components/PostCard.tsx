@@ -1,17 +1,9 @@
 import { useState } from 'react';
 import { BsThreeDots } from 'react-icons/bs';
-import {
-  Block,
-  Actions,
-  ActionsGroup,
-  ActionsLabel,
-  ActionsButton,
-} from 'konsta/react';
+import { Block } from 'konsta/react';
 import { FaPlay, FaUserCircle } from 'react-icons/fa';
 import { GiAmericanFootballHelmet } from 'react-icons/gi';
-import { HiStatusOnline } from 'react-icons/hi';
-import { RiHeart2Line, RiTimeLine, RiChat1Line } from 'react-icons/ri';
-import { MdSignalWifiStatusbar2Bar } from 'react-icons/md';
+import { RiTimeLine } from 'react-icons/ri';
 import ReactPlayer from 'react-player';
 import classNames from 'classnames';
 import CommentsPopup from './CommentsPopup';

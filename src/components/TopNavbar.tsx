@@ -1,5 +1,5 @@
-import { ReactNode, useEffect, useState } from 'react';
-import { Navbar, Link } from 'konsta/react';
+import { ReactNode, useState } from 'react';
+import { Navbar } from 'konsta/react';
 import { MdOutlineNotificationsActive } from 'react-icons/md';
 import { FaUserCircle } from 'react-icons/fa';
 import { RiSettingsLine } from 'react-icons/ri';
