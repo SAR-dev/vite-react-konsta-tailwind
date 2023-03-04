@@ -3,13 +3,18 @@ import TopNavbar from '@src/components/TopNavbar';
 import useScrollPosition from '@src/hooks/useScrollPosition';
 import { Page, Block, Segmented, SegmentedButton, Link } from 'konsta/react';
 import { RiAdminFill, RiMapPin5Fill, RiMapPin5Line } from 'react-icons/ri';
-import { MdAvTimer, MdMoney, MdMyLocation, MdPlace } from 'react-icons/md';
+import {
+  MdAvTimer,
+  MdMoney,
+  MdMyLocation,
+  MdOutlineManageAccounts,
+  MdPlace,
+} from 'react-icons/md';
 import { SiGooglemaps } from 'react-icons/si';
 import { ImCalendar } from 'react-icons/im';
 import { RxChevronUp, RxMinus, RxPlus } from 'react-icons/rx';
 import { AccordionItem, AccordionWrapper } from '@src/components/Accordion';
-import { FaMapMarkerAlt } from 'react-icons/fa';
-import { BsArrow90DegRight } from 'react-icons/bs';
+import { FaUserGraduate, FaUserCircle, FaUserAstronaut } from 'react-icons/fa';
 import EventLayout from '@src/components/EventLayout';
 
 const id = 'event-description';
@@ -60,6 +65,59 @@ const EventDescription = () => {
           your app to hybrid Cordova or Capacitor app that can be released at
           iOS and Google Play store refer to their official documentations.
         </p>
+      </Block>
+
+      <Block strong inset>
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <div className="flex space-x-2 items-center font-semibold border-b pb-2">
+              <FaUserAstronaut size={20} />
+              <p>Event Managers</p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[...Array(5)].map((e, i) => (
+                <div className="flex space-x-3 items-center" key={i}>
+                  <div className="avatar">
+                    <FaUserCircle size={30} />
+                  </div>
+                  <div className="space-y-.5">
+                    <p className="font-semibold text-sm">Sayed Rafi</p>
+                    <div className="text-xs">Food Manager</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex space-x-2 items-center font-semibold border-b pb-2">
+              <FaUserGraduate size={20} />
+              <p>Guests</p>
+            </div>
+            <div className="grid grid-cols-1 gap-4">
+              {[...Array(2)].map((e, i) => (
+                <div className="space-y-2" key={i}>
+                  <div className="flex space-x-3 items-center">
+                    <div className="avatar">
+                      <FaUserCircle size={30} />
+                    </div>
+                    <div className="space-y-.5">
+                      <p className="font-semibold text-sm">Sayed Rafi</p>
+                      <div className="text-xs">Food Manager</div>
+                    </div>
+                  </div>
+                  <p>
+                    Current documentation doesn't cover the process of
+                    compilation of Konsta UI app to Cordova or Capacitor app. It
+                    is about Konsta UI and how to use all of its components.
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Event Manager */}
+        {/* Guests */}
       </Block>
 
       <Block strong inset className="space-y-4 mt-4">
