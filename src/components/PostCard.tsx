@@ -7,7 +7,7 @@ import {
   ActionsLabel,
   ActionsButton,
 } from 'konsta/react';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaPlay, FaUserCircle } from 'react-icons/fa';
 import { GiAmericanFootballHelmet } from 'react-icons/gi';
 import { HiStatusOnline } from 'react-icons/hi';
 import { RiHeart2Line, RiTimeLine, RiChat1Line } from 'react-icons/ri';
@@ -85,8 +85,12 @@ const PostCard = (props: PostCardInterface) => {
           </div>
         )}
         {!props.images && props.video && (
-          <div className="flex w-full">
-            <ReactPlayer url={props.video} />
+          <div className="flex w-full rounded overflow-hidden">
+            <ReactPlayer url={props.video} height={300} light playIcon={
+              <button className='h-16 w-16 bg-gray-500 hover:bg-blue-500 hover:text-white rounded-full flex items-center justify-center'>
+                <FaPlay size={20} />
+              </button>
+            } />
           </div>
         )}
         <div className="flex items-center">
