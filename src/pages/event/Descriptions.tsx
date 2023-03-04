@@ -2,12 +2,14 @@ import { useRef, useState } from 'react';
 import TopNavbar from '@src/components/TopNavbar';
 import useScrollPosition from '@src/hooks/useScrollPosition';
 import { Page, Block, Segmented, SegmentedButton, Link } from 'konsta/react';
-import { RiAdminFill } from 'react-icons/ri';
+import { RiAdminFill, RiMapPin5Fill } from 'react-icons/ri';
 import { MdAvTimer, MdMoney, MdMyLocation, MdPlace } from 'react-icons/md';
 import { SiGooglemaps } from 'react-icons/si';
 import { ImCalendar } from 'react-icons/im';
 import { RxChevronUp, RxMinus, RxPlus } from 'react-icons/rx';
 import { AccordionItem, AccordionWrapper } from '@src/components/Accordion';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import { BsArrow90DegRight } from 'react-icons/bs';
 
 const id = 'event-description';
 
@@ -70,13 +72,6 @@ const EventDescription = () => {
           <div className="flex space-x-2 items-center">
             <MdMyLocation size={20} />
             <div className="font-semibold">Dhaka</div>
-            <a
-              className="text-blue-600"
-              href="https://google.com"
-              target="_blank"
-            >
-              <SiGooglemaps size={20} />
-            </a>
           </div>
           <div className="flex space-x-2 items-center">
             <ImCalendar size={18} />
@@ -89,6 +84,12 @@ const EventDescription = () => {
           <div className="flex space-x-2 items-center">
             <MdMoney size={20} />
             <div className="font-semibold">20$</div>
+          </div>
+          <div>
+            <button className="btn btn-xs btn-success gap-2 rounded">
+              <RiMapPin5Fill size={16} />
+              Google Map
+            </button>
           </div>
         </div>
         <p>

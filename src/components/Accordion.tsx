@@ -24,7 +24,7 @@ export const AccordionItem = ({
           onClick={() => setShow(!show)}
         >
           {title}
-          {show ? <RxChevronDown /> : <RxChevronUp />}
+          {show ? <RxChevronUp /> : <RxChevronDown />}
         </button>
       </h2>
       {show && <div className="p-3 border-t border-gray-200">{children}</div>}
@@ -34,7 +34,7 @@ export const AccordionItem = ({
 
 export const AccordionWrapper = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="border border-neutral border-gray-200 rounded divide-y divide-gray-200">
+    <div className="border border-gray-200 rounded divide-y divide-gray-200">
       {children}
     </div>
   );
