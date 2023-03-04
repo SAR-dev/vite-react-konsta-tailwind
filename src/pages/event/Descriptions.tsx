@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import TopNavbar from '@src/components/TopNavbar';
 import useScrollPosition from '@src/hooks/useScrollPosition';
 import { Page, Block, Segmented, SegmentedButton, Link } from 'konsta/react';
-import { RiAdminFill, RiMapPin5Fill } from 'react-icons/ri';
+import { RiAdminFill, RiMapPin5Fill, RiMapPin5Line } from 'react-icons/ri';
 import { MdAvTimer, MdMoney, MdMyLocation, MdPlace } from 'react-icons/md';
 import { SiGooglemaps } from 'react-icons/si';
 import { ImCalendar } from 'react-icons/im';
@@ -43,10 +43,14 @@ const EventDescription = () => {
             <div className="font-semibold">20$</div>
           </div>
           <div>
-            <button className="btn btn-xs btn-success gap-2 rounded">
-              <RiMapPin5Fill size={16} />
+            <a
+              href="#"
+              target="_blank"
+              className="btn btn-xs btn-outline border-gray-200 btn-ghost gap-2 rounded"
+            >
+              <RiMapPin5Line size={16} />
               Google Map
-            </button>
+            </a>
           </div>
         </div>
         <p>
