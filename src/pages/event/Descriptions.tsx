@@ -117,9 +117,9 @@ const EventDescription = () => {
               <FaHandsHelping size={20} />
               <p>Contributors</p>
             </div>
-            <div className="flex flex-wrap">
+            <div className="grid grid-cols-7 gap-3">
               {[...Array(15)].map((e, i) => (
-                <a className="mr-3 mb-3" href="#" target="_blank" key={i}>
+                <a className="" href="#" target="_blank" key={i}>
                   <img
                     className="h-10 w-10 rounded-full"
                     src={`https://api.multiavatar.com/${i}.svg`}
