@@ -186,101 +186,62 @@ const EventDescription = () => {
       <Block strong inset className="space-y-6 mt-4">
         <div className="space-y-4">
           <p className="font-semibold">Platinum Sponsors</p>
-          <div className="grid grid-cols-2 gap-3">
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/d7FJx2d/image.png"
-                alt=""
-              />
-            </a>
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/SnNFJtk/image.png"
-                alt=""
-              />
-              <p>Facebook</p>
-            </a>
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/SnNFJtk/image.png"
-                alt=""
-              />
-              <p>Facebook</p>
-            </a>
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/SnNFJtk/image.png"
-                alt=""
-              />
-              <p>Facebook</p>
-            </a>
+          <div className="grid grid-cols-4 gap-3">
+            {[...Array(4)].map((e, i) => (
+              <a href="" className="space-y-1" key={i}>
+                <img
+                  className="h-10"
+                  src={`https://api.multiavatar.com/${i}.svg`}
+                  alt=""
+                />
+                <div className="font-semibold">Gitlab</div>
+              </a>
+            ))}
           </div>
         </div>
         <div className="space-y-4">
           <p className="font-semibold">Gold Sponsors</p>
-          <div className="grid grid-cols-2 gap-3">
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/d7FJx2d/image.png"
-                alt=""
-              />
-              <p>Gitlab</p>
-            </a>
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/SnNFJtk/image.png"
-                alt=""
-              />
-              <p>Facebook</p>
-            </a>
+          <div className="grid grid-cols-4 gap-3">
+            {[...Array(4)].map((e, i) => (
+              <a href="" className="space-y-1" key={i}>
+                <img
+                  className="h-10"
+                  src={`https://api.multiavatar.com/${i}.svg`}
+                  alt=""
+                />
+                <div className="font-semibold">Gitlab</div>
+              </a>
+            ))}
           </div>
         </div>
         <div className="space-y-4">
           <p className="font-semibold">Silver Sponsors</p>
-          <div className="grid grid-cols-2 gap-3">
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/d7FJx2d/image.png"
-                alt=""
-              />
-              <p>Gitlab</p>
-            </a>
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/SnNFJtk/image.png"
-                alt=""
-              />
-              <p>Facebook</p>
-            </a>
+          <div className="grid grid-cols-4 gap-3">
+            {[...Array(4)].map((e, i) => (
+              <a href="" className="space-y-1" key={i}>
+                <img
+                  className="h-10"
+                  src={`https://api.multiavatar.com/${i}.svg`}
+                  alt=""
+                />
+                <div className="font-semibold">Gitlab</div>
+              </a>
+            ))}
           </div>
         </div>
         <div className="space-y-4">
           <p className="font-semibold">Special Thanks</p>
-          <div className="grid grid-cols-2 gap-3">
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/d7FJx2d/image.png"
-                alt=""
-              />
-              <p>Gitlab</p>
-            </a>
-            <a href="" className="flex space-x-2 items-center font-semibold">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/SnNFJtk/image.png"
-                alt=""
-              />
-              <p>Facebook</p>
-            </a>
+          <div className="grid grid-cols-4 gap-3">
+            {[...Array(4)].map((e, i) => (
+              <a href="" className="space-y-1" key={i}>
+                <img
+                  className="h-10"
+                  src={`https://api.multiavatar.com/${i}.svg`}
+                  alt=""
+                />
+                <div className="font-semibold">Gitlab</div>
+              </a>
+            ))}
           </div>
         </div>
       </Block>
