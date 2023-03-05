@@ -5,7 +5,7 @@ import { TfiCommentsSmiley, TfiComments, TfiClipboard } from 'react-icons/tfi';
 
 const EventDiscussion = () => {
   return (
-    <div className="mt-5 space-y-5">
+    <div className="mt-2 space-y-2">
       <Block inset strong margin="my-0">
         <div className="flex justify-between">
           <div className="flex items-center space-x-2">
