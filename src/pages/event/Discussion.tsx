@@ -6,7 +6,7 @@ import { TfiCommentsSmiley, TfiComments, TfiClipboard } from 'react-icons/tfi';
 const EventDiscussion = () => {
   return (
     <div className="mt-2">
-      <Block inset strong className="space-y-4 my-0 mb-0">
+      <Block inset strong nested={true} margin="my-0" className="space-y-4">
         <div className="flex justify-between">
           <div className="flex items-center space-x-2">
             <TfiClipboard size={16} />
