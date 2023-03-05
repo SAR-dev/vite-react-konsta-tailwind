@@ -3,8 +3,9 @@ import TopNavbar from '@src/components/TopNavbar';
 import useScrollPosition from '@src/hooks/useScrollPosition';
 import { Page, Segmented, SegmentedButton } from 'konsta/react';
 import { MdOutlineEmojiPeople } from 'react-icons/md';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const id = 'event-description';
+const id = 'event';
 
 interface EventLayoutProps {
   children: ReactNode;
@@ -13,7 +14,10 @@ interface EventLayoutProps {
 const EventLayout = (props: EventLayoutProps) => {
   const scrollPosition = useScrollPosition(id);
   const [activeSegmented, setActiveSegmented] = useState(1);
-  const [showAll, setShowAll] = useState(false);
+  const { event_id } = useParams<{ event_id?: string }>();
+  const { section } =
+    useParams<{ section?: 'details' | 'discussion' | 'gallery' }>();
+  const navigate = useNavigate();
 
   return (
     <Page id={id}>
@@ -44,24 +48,24 @@ const EventLayout = (props: EventLayoutProps) => {
         <Segmented strong>
           <SegmentedButton
             strong
-            active={activeSegmented === 1}
-            onClick={() => setActiveSegmented(1)}
+            active={!section || section === 'details'}
+            onClick={() => navigate(`/events/${event_id}/details`)}
             className="py-5"
           >
             Details
           </SegmentedButton>
           <SegmentedButton
             strong
-            active={activeSegmented === 2}
-            onClick={() => setActiveSegmented(2)}
+            active={section === 'discussion'}
+            onClick={() => navigate(`/events/${event_id}/discussion`)}
             className="py-5"
           >
             Discussion
           </SegmentedButton>
           <SegmentedButton
             strong
-            active={activeSegmented === 3}
-            onClick={() => setActiveSegmented(3)}
+            active={section === 'gallery'}
+            onClick={() => navigate(`/events/${event_id}/gallery`)}
             className="py-5"
           >
             Gallery

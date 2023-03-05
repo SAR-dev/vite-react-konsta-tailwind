@@ -11,16 +11,13 @@ import {
   FaUserAstronaut,
   FaHandsHelping,
 } from 'react-icons/fa';
-import EventLayout from '@src/components/EventLayout';
 import { BsFillBookmarkHeartFill } from 'react-icons/bs';
 
-const id = 'event-description';
-
-const EventDescription = () => {
+const EventDetails = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <EventLayout>
+    <>
       <Block inset strong className="space-y-4 mt-2">
         <div className="grid grid-cols-1 gap-3">
           <div className="flex space-x-2 items-center">
@@ -261,8 +258,8 @@ const EventDescription = () => {
           </div>
         </div>
       </Block>
-    </EventLayout>
+    </>
   );
 };
 
-export default EventDescription;
+export default EventDetails;
