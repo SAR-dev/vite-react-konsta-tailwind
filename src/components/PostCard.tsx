@@ -22,7 +22,7 @@ const PostCard = (props: PostCardInterface) => {
 
   return (
     <div className="relative">
-      <Block strong inset className="space-y-4">
+      <Block strong inset className="space-y-4" margin='my-0'>
         <div className="flex items-center w-full">
           <div className="flex space-x-3 items-center">
             <div className="avatar">

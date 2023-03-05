@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Page>
       <TopNavbar />
-      <div className="space-y-5">
+      <div className="space-y-5 mt-5">
         <PostCard
           images={[
             'https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg',
