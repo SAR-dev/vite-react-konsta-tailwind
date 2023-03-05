@@ -5,7 +5,12 @@ import { MdAvTimer, MdMoney, MdMyLocation } from 'react-icons/md';
 import { ImCalendar } from 'react-icons/im';
 import { RxMinus, RxPlus } from 'react-icons/rx';
 import { AccordionItem, AccordionWrapper } from '@src/components/Accordion';
-import { FaUserGraduate, FaUserCircle, FaUserAstronaut } from 'react-icons/fa';
+import {
+  FaUserGraduate,
+  FaUserCircle,
+  FaUserAstronaut,
+  FaHandsHelping,
+} from 'react-icons/fa';
 import EventLayout from '@src/components/EventLayout';
 
 const id = 'event-description';
@@ -106,9 +111,25 @@ const EventDescription = () => {
               ))}
             </div>
           </div>
+
+          <div className="space-y-4">
+            <div className="flex space-x-2 items-center font-semibold border-b pb-2">
+              <FaHandsHelping size={20} />
+              <p>Contributors</p>
+            </div>
+            <div className="flex flex-wrap">
+              {[...Array(15)].map((e, i) => (
+                <a className="mr-3 mb-3" href="#" target="_blank" key={i}>
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src={`https://api.multiavatar.com/${i}.svg`}
+                    alt=""
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-        {/* Event Manager */}
-        {/* Guests */}
       </Block>
 
       <Block strong inset className="space-y-4 mt-4">
@@ -172,7 +193,6 @@ const EventDescription = () => {
                 src="https://i.ibb.co/d7FJx2d/image.png"
                 alt=""
               />
-              <p>Gitlab</p>
             </a>
             <a href="" className="flex space-x-2 items-center font-semibold">
               <img
