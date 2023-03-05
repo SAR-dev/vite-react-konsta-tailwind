@@ -8,26 +8,37 @@ interface PostActionsInterface {
 
 const PostActions = (props: PostActionsInterface) => {
   return (
-    <div className="flex items-center space-x-1">
-      <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-blue-200/50 hover:text-blue-600">
-        <RiHeart2Line size={18} />
-        <div>30</div>
-      </button>
-      <button
-        className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-pink-200/50 hover:text-pink-600"
-        onClick={() => props.setShowComments(true)}
-      >
-        <RiChat1Line size={18} />
-        <div>30</div>
-      </button>
-      <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-green-200/50 hover:text-green-600">
-        <HiStatusOnline size={18} />
-        <div>30</div>
-      </button>
-      <button className="space-x-2 rounded-md btn btn-sm bg-gray-100/75 border-0 text-gray-700 hover:bg-green-200/50 hover:text-green-600">
-        <MdSignalWifiStatusbar2Bar size={18} />
-        <div>0.7</div>
-      </button>
+    <div className="flex items-center space-x-5">
+      <div className="flex items-center space-x-2">
+        <button className="hover:text-blue-600 hover:scale-125 transition-all duration-100">
+          <RiHeart2Line size={18} />
+        </button>
+        <div className="font-semibold">30</div>
+      </div>
+
+      <div className="flex items-center space-x-2">
+        <button
+          className="hover:text-pink-600 hover:scale-125 transition-all duration-100"
+          onClick={() => props.setShowComments(true)}
+        >
+          <RiChat1Line size={18} />
+        </button>
+        <div className="font-semibold">30</div>
+      </div>
+
+      <div className="flex items-center space-x-2">
+        <button className="hover:text-green-600 hover:scale-125 transition-all duration-100">
+          <HiStatusOnline size={18} />
+        </button>
+        <div className="font-semibold">30</div>
+      </div>
+
+      <div className="flex items-center space-x-2">
+        <button className="hover:text-blue-600 hover:scale-125 transition-all duration-100">
+          <MdSignalWifiStatusbar2Bar size={18} />
+        </button>
+        <div className="font-semibold">0.7</div>
+      </div>
     </div>
   );
 };
