@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Block } from 'konsta/react';
 import { RiAdminFill, RiMapPin5Line } from 'react-icons/ri';
-import { MdAvTimer, MdMoney, MdMyLocation } from 'react-icons/md';
+import { MdAvTimer, MdFrontHand, MdMoney, MdMyLocation } from 'react-icons/md';
 import { ImCalendar } from 'react-icons/im';
 import { RxMinus, RxPlus } from 'react-icons/rx';
 import { AccordionItem, AccordionWrapper } from '@src/components/Accordion';
@@ -12,6 +12,7 @@ import {
   FaHandsHelping,
 } from 'react-icons/fa';
 import EventLayout from '@src/components/EventLayout';
+import { BsFillBookmarkHeartFill } from 'react-icons/bs';
 
 const id = 'event-description';
 
@@ -134,7 +135,10 @@ const EventDescription = () => {
 
       <Block strong inset className="space-y-4 mt-4">
         <div className="flex items-center justify-between px-1">
-          <p className="font-semibold">Read Carefully</p>
+          <div className="flex space-x-2 items-center font-semibold">
+            <MdFrontHand size={20} />
+            <p>Read Carefully</p>
+          </div>
           <button
             className="hover:text-blue-500"
             onClick={() => setShowAll(!showAll)}
@@ -185,10 +189,13 @@ const EventDescription = () => {
 
       <Block strong inset className="space-y-6 mt-4">
         <div className="space-y-4">
-          <p className="font-semibold">Platinum Sponsors</p>
+          <div className="flex space-x-2 items-center font-semibold border-b pb-2">
+            <BsFillBookmarkHeartFill size={20} className="text-red-500" />
+            <p>Platinum Sponsors</p>
+          </div>
           <div className="grid grid-cols-4 gap-3">
             {[...Array(4)].map((e, i) => (
-              <a href="" className="space-y-1" key={i}>
+              <a href="" target="_blank" className="space-y-1" key={i}>
                 <img
                   className="h-10"
                   src={`https://api.multiavatar.com/${i}.svg`}
@@ -200,10 +207,13 @@ const EventDescription = () => {
           </div>
         </div>
         <div className="space-y-4">
-          <p className="font-semibold">Gold Sponsors</p>
+          <div className="flex space-x-2 items-center font-semibold border-b pb-2">
+            <BsFillBookmarkHeartFill size={20} className="text-yellow-500" />
+            <p>Gold Sponsors</p>
+          </div>
           <div className="grid grid-cols-4 gap-3">
             {[...Array(4)].map((e, i) => (
-              <a href="" className="space-y-1" key={i}>
+              <a href="" target="_blank" className="space-y-1" key={i}>
                 <img
                   className="h-10"
                   src={`https://api.multiavatar.com/${i}.svg`}
@@ -215,10 +225,13 @@ const EventDescription = () => {
           </div>
         </div>
         <div className="space-y-4">
-          <p className="font-semibold">Silver Sponsors</p>
+          <div className="flex space-x-2 items-center font-semibold border-b pb-2">
+            <BsFillBookmarkHeartFill size={20} className="text-gray-500" />
+            <p>Silver Sponsors</p>
+          </div>
           <div className="grid grid-cols-4 gap-3">
             {[...Array(4)].map((e, i) => (
-              <a href="" className="space-y-1" key={i}>
+              <a href="" target="_blank" className="space-y-1" key={i}>
                 <img
                   className="h-10"
                   src={`https://api.multiavatar.com/${i}.svg`}
@@ -230,10 +243,13 @@ const EventDescription = () => {
           </div>
         </div>
         <div className="space-y-4">
-          <p className="font-semibold">Special Thanks</p>
+          <div className="flex space-x-2 items-center font-semibold border-b pb-2">
+            <BsFillBookmarkHeartFill size={20} />
+            <p>Special Thanks</p>
+          </div>
           <div className="grid grid-cols-4 gap-3">
             {[...Array(4)].map((e, i) => (
-              <a href="" className="space-y-1" key={i}>
+              <a href="" target="_blank" className="space-y-1" key={i}>
                 <img
                   className="h-10"
                   src={`https://api.multiavatar.com/${i}.svg`}
