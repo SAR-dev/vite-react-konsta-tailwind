@@ -13,7 +13,6 @@ interface EventLayoutProps {
 
 const EventLayout = (props: EventLayoutProps) => {
   const scrollPosition = useScrollPosition(id);
-  const [activeSegmented, setActiveSegmented] = useState(1);
   const { event_id } = useParams<{ event_id?: string }>();
   const { section } =
     useParams<{ section?: 'details' | 'discussion' | 'gallery' }>();
@@ -39,8 +38,8 @@ const EventLayout = (props: EventLayoutProps) => {
         <div className="absolute bottom-0 m-3">
           <div className="bg-white px-3 py-1 rounded flex items-center space-x-1">
             <MdOutlineEmojiPeople />
-            <p className="font-semibold text-sm">433</p>
-            <p className="text-xs">GOING</p>
+            <p className="font-semibold">433</p>
+            <p>GOING</p>
           </div>
         </div>
       </div>
