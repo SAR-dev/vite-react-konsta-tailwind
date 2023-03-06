@@ -35,7 +35,7 @@ const EventLayout = (props: EventLayoutProps) => {
           src="https://wallpapercave.com/wp/wp1916914.jpg"
           alt=""
         />
-        <div className="absolute bottom-0 m-3">
+        <div className="absolute bottom-0 m-4">
           <div className="bg-white px-3 py-1 rounded flex items-center space-x-1">
             <MdOutlineEmojiPeople />
             <p className="font-semibold">433</p>
