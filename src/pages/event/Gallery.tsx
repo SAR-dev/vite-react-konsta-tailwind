@@ -25,6 +25,13 @@ const EventGallery = () => {
   return (
     <>
       <Block inset strong className="space-y-4 mt-2">
+        <div className="carousel w-full rounded-box h-96">
+          {images.map((el, i) => (
+            <div className="carousel-item" key={i}>
+              <img src={el} className="rounded-box" />
+            </div>
+          ))}
+        </div>
         <div className="grid grid-cols-2 gap-3">
           {images.map((el, i) => (
             <button
@@ -43,36 +50,6 @@ const EventGallery = () => {
           ))}
         </div>
       </Block>
-
-      <Sheet
-        opened={sheetOpened}
-        className="pb-safe"
-        onBackdropClick={() => setSheetOpened(false)}
-      >
-        <Block inset strong>
-          <div className="space-y-3 h-64">
-            <div className="flex justify-between">
-              <button
-                className="btn btn-xs btn-outline w-20 rounded"
-                onClick={previous}
-              >
-                Previous
-              </button>
-              <button
-                className="btn btn-xs btn-outline w-20 rounded"
-                onClick={next}
-              >
-                Next
-              </button>
-            </div>
-            <img
-              src={images[active]}
-              className="w-full object-cover rounded group-hover:opacity-75"
-            />
-            <p className="text-sm">Captured by - Rafi</p>
-          </div>
-        </Block>
-      </Sheet>
     </>
   );
 };
